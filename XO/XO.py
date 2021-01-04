@@ -121,5 +121,15 @@ def if_win_with_diagonals():
   else:
     return None
 
+def tie_or_not():
+  
+  global game_still_going
+  
+  if "-" not in board:
+    game_still_playing = False
+    return True
+
+  else:
+    return False
   # ------------ Start Execution -------------
 play_game()
