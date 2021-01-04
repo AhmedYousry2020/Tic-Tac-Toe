@@ -59,6 +59,24 @@ def turning(player):
  
   board_game[position] = player
   show_board()
+
+
+def check_if_winner():
+  
+  global winner
+ 
+  winner_with_row = if_win_with_row()
+  winner_with_column = if_win_with_columns()
+  winner_with_diagonal = if_win_with_diagonals()
+  
+  if winner_with_row:
+    winner = winner_with_row
+  elif winner_with_column:
+    winner = winner_with_column
+  elif winner_with_diagonal:
+    winner = winner_with_diagonal
+  else:
+    winner = None
 def if_win_with_row():
   
   global game_still_going
