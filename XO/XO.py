@@ -131,5 +131,14 @@ def tie_or_not():
 
   else:
     return False
+
+def flip_player():
+  
+  global current_player
+  if current_player == "X":
+    current_player = "O"
+  
+  elif current_player == "O":
+    current_player = "X"
   # ------------ Start Execution -------------
 play_game()
