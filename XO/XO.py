@@ -103,5 +103,23 @@ def if_win_with_columns():
   else:
     return None
 
+def if_win_with_diagonals():
+  
+  global game_still_playing
+  
+  diagonal_1 = board_game[0] == board_game[4] == board_game[8] != "-"
+  diagonal_2 = board_game[2] == board_game[4] == board[6] != "-"
+  
+  if diagonal_1 or diagonal_2:
+    game_still_playing = False
+  
+  if diagonal_1:
+    return board_game[0] 
+  elif diagonal_2:
+    return board_game[2]
+  
+  else:
+    return None
+
   # ------------ Start Execution -------------
 play_game()
